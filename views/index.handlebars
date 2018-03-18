@@ -1,0 +1,47 @@
+
+<img src="/assests/images/wingbkg.PNG" alt="Chicken Wing Background" class="bkgImage">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">WingsNThings</h1>
+    <p class="lead">Welcome to WingsNThings</p>
+  </div>
+</div>
+
+<div class="row content">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 unEaten">
+    <h3 class="text-center">Wings That Have not been devoured</h3> <hr>
+        <div class="row">
+            {{#each wings}}
+                {{#unless devoured}}
+                <div class="wingHolder {{id}}">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 leftSpacer"></div><h4 class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center none">{{wings_name}}</h4> <button type="button" class="btn btn-primary col-xs-4 col-sm-4 col-md-4 col-lg-4 right eat" data-attr="{{id}}">DEVOUR!!</button><div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 rightSpacer"></div>
+                </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="panel panel-default col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="panel-heading"> 
+            <h3 class="panel-title">Add Your Favorite Wing Flavor!</h3>
+        </div>
+        <div class="panel-body">
+            <div class="input-group">
+                <input type="text" placeholder="Wing Flavor" class="newFlavor">
+                <button type="submit" class="btn btn-primary submit">Submit</button>     
+            </div>
+        </div>
+    </div>  
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 eaten">
+    <h3 class="text-center">Wings That Have been devoured</h3><hr>
+        <div class="row">
+            {{#each wings}}
+                {{#if devoured}}
+                <div class="wingHolder {{id}}">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 leftSpacer"></div><h4 class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center none">{{wings_name}}</h4> <button type="button" class="btn btn-primary col-xs-4 col-sm-4 col-md-4 col-lg-4 right order" data-attr="{{id}}">ORDER AGAIN!</button><div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 rightSpacer"></div>
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
