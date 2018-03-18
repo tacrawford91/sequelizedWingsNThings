@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       createdAt: {
         type: DataTypes.TIMESTAMP,
         allowNull: false,
-        defaultValue: CURRENT_TIMESTAMP
+        defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
       }
     });
     return Wing;
