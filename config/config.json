@@ -16,7 +16,7 @@
   "production": {
     "username": "gwh3spsowsbffuos",
     "password": "beo8p98j2xwzliss",
-    "database": "sequelizedWings_db",
+    "database": "mjeaqscn1aszwsfi",
     "host": "gk90usy5ik2otcvi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
